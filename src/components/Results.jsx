@@ -1,13 +1,14 @@
-import { useState } from 'react';
 import { calculateInvestmentResults, formatter } from '../util/investment'
 
 export default function Results({ input }) {
 
     //const [calculation, setCalculation] = useState();
     const calculationResults = calculateInvestmentResults(input);
-    const initialInvestment = calculationResults[0].valueEndOfYear - calculationResults[0].interest - calculationResults[0].annualInvestment;
 
-    console.log("cal===> ", calculationResults);
+    // if(calculationResults.length === 0){
+    //     return <p className='center'>Invalid input data provided.</p>
+    // }
+    const initialInvestment = calculationResults[0].valueEndOfYear - calculationResults[0].interest - calculationResults[0].annualInvestment;
 
     // function handleCalculation() {
     //     setCalculation(() => {
